@@ -7,7 +7,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
   password2 = serializers.CharField(style = {'input_type': 'password'} ,  write_only=True)
   class Meta:
     model = User
-    fields = ['username','email', 'password', 'password2']  # bitch this uses [] not () in fields
+    fields = ['username','email', 'password', 'password2']  #uses [] not () in fields
     extra_kwargs = {
       'password' : {'write_only': True}, 
     }
